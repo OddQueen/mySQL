@@ -64,10 +64,10 @@ async function main()
     //  console.log(result);
 
 //--------------STEP 3-----------------------
-    // let sql = "SELECT student_id, AVG(mark) FROM marks WHERE YEAR(date) = YEAR(now()) GROUP BY student_id;";
-    // let [result] = await connection.query(sql);
-    // console.log("Media aritmética de notas del último año por alumno:");
-    // console.log(result);
+    let sql = "SELECT student_id, AVG(mark) FROM marks WHERE YEAR(date) = YEAR(now()) GROUP BY student_id;";
+    let [result] = await connection.query(sql);
+    console.log("Media aritmética de notas del último año por alumno:"); 
+    console.log(result);
 
     } catch (err) {
         console.log(err);
